@@ -1,0 +1,386 @@
+{
+  "title": "Global warming: Causes, impacts and urgent strategies for a sustainable future: A review",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Abstract",
+      "page": 1,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (19.5)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "1. Introduction",
+      "page": 1,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (19.2)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "74",
+      "page": 2,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 1",
+      "page": 2,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (234.0)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "75",
+      "page": 3,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "2.",
+      "page": 3,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.2)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "76",
+      "page": 4,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "77",
+      "page": 5,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 4",
+      "page": 5,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (183.1)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "78",
+      "page": 6,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "3.",
+      "page": 6,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.0)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "79",
+      "page": 7,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "4.",
+      "page": 7,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.1)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Compound",
+      "page": 7,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (15.6)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Certain greenhouse gases include arsenic hexafluoride, hydrofluorocarbons, perfluorocarbons, and the major",
+      "page": 7,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (15.6)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "5.",
+      "page": 7,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.1)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "80",
+      "page": 8,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 6",
+      "page": 8,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (166.6)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "81",
+      "page": 9,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 7",
+      "page": 9,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (180.0)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 8",
+      "page": 9,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (222.1)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "6.",
+      "page": 9,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.1)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "82",
+      "page": 10,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 9",
+      "page": 10,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (225.1)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "83",
+      "page": 11,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "Figure 10",
+      "page": 11,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (262.5)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "84",
+      "page": 12,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "7.",
+      "page": 12,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.1)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "85",
+      "page": 13,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "8.",
+      "page": 13,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (18.0)",
+        "Font is bold",
+        "Matches numbered/section pattern"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "References",
+      "page": 13,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 11.0)",
+        "Extra spacing above (19.5)",
+        "Font is bold"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "86",
+      "page": 14,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "87",
+      "page": 15,
+      "lang": "LATIN",
+      "explanation": [
+        "Clustered as H1 (font size 10.0)",
+        "Extra spacing above (735.1)"
+      ]
+    }
+  ],
+  "runtime_sec": 0.31,
+  "mem_peak_mb": 144.6,
+  "explainability_and_compliance": {
+    "heuristics": [
+      "Font size clustering (KMeans)",
+      "Boldness and left margin for heading detection",
+      "Spacing and TOC cross-validation",
+      "Multilingual/script-aware heuristics",
+      "Numbered/section heading patterns",
+      "Batch processing, offline, CPU-only",
+      "Strict output directory: /output",
+      "Model size <200MB, runtime <10s, RAM <200MB"
+    ],
+    "compliance": {
+      "output_dir": "/output",
+      "cpu_only": true,
+      "offline": true,
+      "model_size_mb": 80,
+      "runtime_sec": 0.31,
+      "mem_peak_mb": 144.6,
+      "docker_platform": "linux/amd64",
+      "no_gpu": true
+    },
+    "signals_summary": "33 headings detected using >2 heuristic signals each"
+  }
+}

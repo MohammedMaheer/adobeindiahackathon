@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Hackathon Document Intelligence</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/static/adobe_logo.svg" alt="Adobe Logo" class="logo">
+            <h1>Connecting the Dots</h1>
+            <p class="subtitle">AI-powered Document & Persona Intelligence</p>
+            <!-- Judges Mode toggle and How it Works modal trigger will appear here via JS -->
+            <button id="howItWorksBtn" class="btn-secondary" style="float:right; margin-left:12px;">How it Works</button>
+        </header>
+        <section class="upload-section">
+            <form id="uploadForm" enctype="multipart/form-data" style="max-width: 600px; margin: 0 auto;">
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                    <label for="fileInput" class="upload-label" style="font-weight: 600;">Upload your PDF
+                        <input type="file" id="fileInput" name="file" accept="application/pdf" required style="margin-top: 8px;">
+                    </label>
+                    <div class="mode-toggle" style="display: flex; gap: 20px; align-items: center;">
+                        <label><input type="radio" name="mode" value="structure" checked> Structure Extraction</label>
+                        <label><input type="radio" name="mode" value="persona"> Persona Intelligence</label>
+                    </div>
+                    <div id="personaInputs" style="display:none; background: #f7f9fc; border-radius: 8px; border: 1px solid #e3e7ef; padding: 18px 14px 14px 14px; margin-bottom: 10px;">
+                        <div style="font-weight:600; margin-bottom:10px;">Persona & Job Details</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 16px 32px;">
+                            <div style="flex: 1 1 220px; min-width: 200px;">
+                                <label for="personaTemplate">Persona Template</label>
+                                <select id="personaTemplate" style="width: 100%; margin-bottom: 6px;">
+                                    <option value="">-- Select a persona --</option>
+                                    <option value="Japanese high school teacher">Japanese high school teacher</option>
+                                    <option value="Corporate HR manager">Corporate HR manager</option>
+                                    <option value="Healthcare policy analyst">Healthcare policy analyst</option>
+                                    <option value="Small business owner">Small business owner</option>
+                                    <option value="PhD Researcher in Computational Biology">PhD Researcher in Computational Biology</option>
+                                    <option value="Investment Analyst">Investment Analyst</option>
+                                    <option value="Undergraduate Chemistry Student">Undergraduate Chemistry Student</option>
+                                    <option value="Legal Compliance Officer">Legal Compliance Officer</option>
+                                    <option value="K-12 Science Teacher">K-12 Science Teacher</option>
+                                    <option value="Entrepreneur">Entrepreneur</option>
+                                    <option value="Journalist">Journalist</option>
+                                </select>
+                                <input type="text" id="personaInput" name="persona" placeholder="Or enter custom persona" style="width: 100%;">
+                            </div>
+                            <div style="flex: 1 1 220px; min-width: 200px;">
+                                <label for="jobTemplate">Job Template</label>
+                                <select id="jobTemplate" style="width: 100%; margin-bottom: 6px;">
+                                    <option value="">-- Select a job --</option>
+                                    <option value="Find sections about digital education tools">Find sections about digital education tools</option>
+                                    <option value="Summarize HR policies">Summarize HR policies</option>
+                                    <option value="Identify legal compliance topics">Identify legal compliance topics</option>
+                                    <option value="Highlight business growth strategies">Highlight business growth strategies</option>
+                                    <option value="Summarize financials of corporation xyz">Summarize financials of corporation xyz</option>
+                                    <option value="Draft a compliance checklist for new regulations">Draft a compliance checklist for new regulations</option>
+                                    <option value="Find policy implications in government reports">Find policy implications in government reports</option>
+                                    <option value="Highlight recent advances in AI for drug discovery">Highlight recent advances in AI for drug discovery</option>
+                                    <option value="Analyze revenue trends, R&D investments, and market positioning strategies">Analyze revenue trends, R&D investments, and market positioning strategies</option>
+                                    <option value="Identify key concepts and mechanisms for exam preparation on reaction kinetics">Identify key concepts and mechanisms for exam preparation on reaction kinetics</option>
+                                </select>
+                                <input type="text" id="jobInput" name="job" placeholder="Or enter custom job" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-row">
+                        <button type="submit" class="btn-primary"><span class="btn-icon" aria-hidden="true"><svg width="18" height="18" fill="none" viewBox="0 0 20 20"><circle cx="9" cy="9" r="7" stroke="#fff" stroke-width="2"/><path d="M15 15l3.5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>Analyze</button>
+                    </div>
+                </div>
+            </form>
+            <div id="uploadStatus" style="margin-top: 18px;"></div>
+        </section>
+        <section class="results-section" id="resultsSection" style="display:none;">
+            <div id="dashboard"></div>
+            <div id="adobe-dc-view" style="height:600px; margin-top:24px;"></div>
+            <div id="downloadLinks" style="margin-top:1em;"></div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Team Three Musketeers | Adobe India Hackathon</p>
+            <div class="user-guidance">
+                <b>How to use:</b> Upload a PDF and select your mode. For persona intelligence, choose a persona/job template or enter your own. Download the output JSON after analysis for further use.
+            </div>
+        </footer>
+    </div>
+    <!-- How it Works Modal -->
+    <div id="howItWorksModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeHowItWorks">&times;</span>
+        <div id="howItWorksBody">
+          <!-- Modal content will be injected by JS -->
+        </div>
+      </div>
+    </div>
+    <style>
+    /* Modal styles */
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.35); }
+    .modal-content { background: #fff; margin: 7% auto; padding: 32px 24px 24px 24px; border-radius: 12px; width: 95%; max-width: 600px; box-shadow: 0 4px 32px rgba(0,0,0,0.18); position: relative; }
+    .modal-content h2 { margin-top: 0; color: #2a3b5d; }
+    .modal-content ul { margin-left: 20px; }
+    .close { color: #888; float: right; font-size: 2em; font-weight: bold; cursor: pointer; position: absolute; right: 16px; top: 8px; }
+    .close:hover { color: #f44336; }
+    .explainability-section {
+        background: #f4f6fa;
+        border: 2px solid #b3c6e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .explainability-section h3 {
+        margin-top: 0;
+        color: #2a3b5d;
+    }
+    .explainability-section ul {
+        margin: 0 0 8px 20px;
+        padding: 0;
+    }
+    .explainability-section li {
+        font-size: 1em;
+        margin-bottom: 2px;
+    }
+    .explainability-section button {
+        float: right;
+    }
+    </style>
+    <script src="/static/main.js"></script>
+</body>
+</html>
