@@ -68,9 +68,46 @@ docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output adobe-ha
    ```bash
    docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none connecting-dots:latest
    ```
-3. **Webapp (optional):**
+3. **Webapp (optional, local only):**
    - Start Flask: `python3 frontend/app.py`
    - Visit: [http://localhost:5000](http://localhost:5000)
+
+---
+
+## 🌐 Deploying to Render (Recommended for Backend)
+
+Render is a free and easy platform for deploying Python web apps (Flask, FastAPI, etc.).
+
+### Steps:
+1. **Push your code to GitHub** (already done).
+2. **Go to [Render.com](https://render.com/)** and sign up/log in.
+3. **Create a new Web Service:**
+   - Connect your GitHub repo.
+   - Choose `frontend/app.py` as the entry point (for Flask).
+   - Set build command: `pip install -r requirements.txt`
+   - Set start command: `python frontend/app.py`
+   - Set environment to Python 3.9+
+4. **Deploy!**
+5. **Get your public Render URL** (e.g., `https://your-app.onrender.com`).
+6. **Test your app:** Visit the URL and ensure the frontend loads and PDF upload/view works.
+
+---
+
+## 🔑 Adobe PDF Embed API: Allowed Domain Setup
+
+1. **Go to [Adobe Developer Console](https://developer.adobe.com/console)**.
+2. **Open your PDF Embed API project.**
+3. **Add your Render domain** (e.g., `https://your-app.onrender.com`) to the Allowed Domains list (no trailing slash).
+4. **Save and copy your Client ID.**
+5. **Update your frontend code** to use this Client ID if needed.
+6. **Test PDF Embed API on your deployed Render domain.**
+
+---
+
+## 📝 Notes
+- Netlify/Vercel are not suitable for Python backend apps.
+- For static-only frontend, copy `index.html` and assets to a root folder and deploy that, but most features require backend (Flask).
+- For other platforms (Railway, Heroku), steps are similar: connect GitHub, set Python build/start commands, deploy, and use the public domain for Adobe API.
 
 ---
 
